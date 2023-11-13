@@ -20,9 +20,9 @@ def github_api():
         restart_pm2_command = "pm2 reload server"
         restart_nginx_command = "cd && sudo systemctl restart nginx"
         print_output = "echo 'Application deployed successfully'"
-        # subprocess.run(pull_command, shell=True)
-        # subprocess.run(restart_pm2_command, shell=True)
-        # subprocess.run(restart_nginx_command, shell=True)
+        subprocess.run(pull_command, shell=True)
+        subprocess.run(restart_pm2_command, shell=True)
+        subprocess.run(restart_nginx_command, shell=True)
         subprocess.run(print_output,shell=True)
     return info
     
