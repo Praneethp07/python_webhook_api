@@ -11,5 +11,14 @@ def hello():
     return 'hello'
 
 
+@app.route('/github',methods=['POST'])
+def github_api():
+    if request.headers['Content-Type']=='application/json':
+        info = request.json
+        print(info)
+    return info
+    
+
+
 if __name__ == '__main__':
     app.run(debug=True)
