@@ -17,12 +17,12 @@ def github_api():
         info = request.json
         print(info)
         pull_command = "cd ~/Chat_Api && git pull origin main"
-        restart_pm2_command = "pm2 restart server.js"
-        restart_nginx_command = "sudo systemctl restart nginx"
+        restart_pm2_command = "pm2 reload server"
+        restart_nginx_command = "cd && sudo systemctl restart nginx"
         print_output = "echo 'Application deployed successfully'"
-        subprocess.run(pull_command, shell=True)
-        subprocess.run(restart_pm2_command, shell=True)
-        subprocess.run(restart_nginx_command, shell=True)
+        # subprocess.run(pull_command, shell=True)
+        # subprocess.run(restart_pm2_command, shell=True)
+        # subprocess.run(restart_nginx_command, shell=True)
         subprocess.run(print_output,shell=True)
     return info
     
