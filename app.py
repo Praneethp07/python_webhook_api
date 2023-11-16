@@ -22,7 +22,7 @@ def github_api():
         subprocess.run(reset_command, shell=True)
 
         # Clean any untracked files and directories
-        clean_command = "cd ~/Chat_Api && git clean -df"
+        clean_command = "cd ~/Chat_Api && git clean -df && npm install express && npm install"
         subprocess.run(clean_command, shell=True)
 
         # Restart PM2-managed server
