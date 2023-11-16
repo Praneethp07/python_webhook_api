@@ -15,7 +15,7 @@ def hello():
 def github_api():
     if request.headers['Content-Type']=='application/json':
         info = request.json
-        print(info)
+        #print(info)
         pull_command = "cd ~/Chat_Api && git pull origin main"
         restart_pm2_command = "pm2 reload server"
         restart_nginx_command = "cd && sudo systemctl restart nginx"
