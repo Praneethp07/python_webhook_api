@@ -21,10 +21,10 @@ Before using this deployment automation script, ensure you have the following de
 
     Install the required Python and Node.js dependencies:
 
-    bash
+bash
 
-npm install express
-npm install
+      npm install express
+      npm install
 
 Run the Flask application:
 
